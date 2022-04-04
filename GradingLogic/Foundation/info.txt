@@ -1,1 +1,0 @@
-the logic for foundation subjects with comments go in this folder

@@ -1,1 +1,3 @@
 code for running the application itself
+
+there is no need to have Controllers and GradingLogic folders seperately. Instead, we'll have two files named controllers.py and GradingLogic.py here only(under this folder), for the same thing.
