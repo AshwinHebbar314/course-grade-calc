@@ -8,7 +8,7 @@
 </head>
 <body>
     {% if flag == 0 %}
-    <form action="/" method="GET">
+    <form action="/foundation" method = "post" >
         <select name="subject" id="subject" onchange="this.form.submit()">
         <option selected>Select</option>
         {% for i in d %}
@@ -16,12 +16,13 @@
         {% endfor %}
         </select>
     </form>
-    {% endif %}
+    {% endif %} 
     {% if flag == 1 %}
     <div>{% block content %}{% endblock %}</div>
     {% endif %}
     <div>
-        <a href="/">Go home</a>
+        <a href="/foundation">Go home</a>
     </div>
 </body>
+</html>
 </html>

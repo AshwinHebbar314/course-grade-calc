@@ -2,12 +2,48 @@ from main import app
 from flask import render_template,request
 from .diploma import *
 from .grade import *
+from .foundation import *
 
-@app.route("/",methods = ['GET','POST'])
+@app.route("/")
+def homepage():
+    return render_template("homepage.html")
+
+
+@app.route("/foundation", methods = ['GET', 'POST'])
+def foundation_index():
+    subject_id = request.args.get('subject')
+    if request.method == "GET":
+        if request.args == {}:
+            return render_template("foundation.html", flag = 0, d = subid)
+        if int(request.args.get('subject')) in [1,2,3,4,5,6,7,8]:
+            return foundation_sub(subject_id)
+    else:
+        sub = FoundationSubs(subject_id, request.form)
+        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print(request.args.get('subject'))
+        print(request.form)
+        t = sub.calculate()
+        print(t)
+        # g = grade(int(t))
+        # print(g)
+        return render_template("result.html", t = t)
+
+
+    
+@app.route("/foundation/<subjectid>", methods = ['GET', 'POST'])
+def foundation_sub(subjectid):
+    if request.method == "GET":
+        if int(subjectid) in [1,2,3,4,5,6,8]:
+            return render_template("foundation/type1.html", subname = subid[subjectid], subid = subjectid)
+        elif int(subjectid) == 7:
+            return render_template("foundation/type2.html", subname = subid[subjectid])
+
+
+@app.route("/diploma",methods = ['GET','POST'])
 def index():
     if request.method == 'GET':
         if request.args == {}:
-            return render_template("index.html",flag=0,d=diploma)
+            return render_template("diploma.html",flag=0,d=diploma)
         if request.args.get("subject") == '1':
             i = '1'
             return render_template("diploma/sub1.html",flag=1,x=i,y=diploma[i])

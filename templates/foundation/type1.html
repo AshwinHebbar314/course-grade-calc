@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator for {{subname}}</title>
+</head>
+<body>
+    <h1>Grade Calculator for {{subname}} </h1>
+    <form action="/foundation" method = "post">
+        <p>GAA Marks</p>
+        <input type="text" placeholder  = "GAA" name = "gaa">
+        <p>Quiz 1 Marks</p>
+        <input type="text" placeholder  = "Quiz 1" name = "q1">
+        <p>Quiz 2 Marks</p>
+        <input type="text" placeholder  = "Quiz 2" name = "q2">
+        {% if subid == '6' %}
+        <p>Extra Marks</p>
+        <input type="text" placeholder  = "Extra Marks" name = "exAct">
+        {% endif %}
+        <p>Expected Final Score</p>
+        <input type="text" placeholder  = "(Expected) End Sem Score" name = "f">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
