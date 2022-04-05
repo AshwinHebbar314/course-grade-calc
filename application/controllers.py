@@ -85,4 +85,4 @@ def index():
         sub=DiplomaSubject(request.form['subject'],request.form)
         t = round(sub.calculate(),2)
         g = grade(t)
-        return render_template("result.html",t=t,g=g)
+        return render_template("diplomaresult.html",t=t,g=g)
