@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<form action="/" method="POST">
+    <select name="subject" id="subject">
+        <option value="{{x}}">{{y}}</option>
+    </select><br>
+    <input type="number" step="any" name="gaa" placeholder='gaa' required><br>
+    <input type="number" step="any" name="q1" placeholder='q1' required><br>
+    <input type="number" step="any" name="q2" placeholder='q2' required><br>
+    <input type="number" step="any" name="op" placeholder='viva/oppe' required><br>
+    <input type="number" step="any" name="f" placeholder='f' required><br>
+    <input type="submit"><br>
+</form>
+{% endblock %}

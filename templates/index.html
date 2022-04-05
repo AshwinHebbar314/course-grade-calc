@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if flag == 0 %}
+    <form action="/" method="GET">
+        <select name="subject" id="subject" onchange="this.form.submit()">
+        <option selected>Select</option>
+        {% for i in d %}
+        <option value="{{i}}">{{d[i]}}</option>
+        {% endfor %}
+        </select>
+    </form>
+    {% endif %}
+    {% if flag == 1 %}
+    <div>{% block content %}{% endblock %}</div>
+    {% endif %}
+    <div>
+        <a href="/">Go home</a>
+    </div>
+</body>
+</html>
