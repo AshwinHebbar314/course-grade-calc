@@ -1,7 +1,7 @@
-{% extends "index.html" %}
+{% extends "diploma.html" %}
 {% block content %}
-<form action="/" method="POST">
-    <select name="subject" id="subject">
+<form action="/diploma" method="POST">
+    <select class="form-select" name="subject" id="subject">
         <option value="{{x}}">{{y}}</option>
     </select><br>
     <input type="number" step="any" name="gaa" placeholder='gaa' required><br>
