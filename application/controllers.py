@@ -4,11 +4,12 @@ from .diploma import *
 from .grade import *
 from .foundation import *
 
+#Homepage
 @app.route("/")
 def homepage():
     return render_template("homepage.html")
 
-
+#Foundation
 @app.route("/foundation", methods = ['GET', 'POST'])
 def foundation_index():
     subject_id = request.args.get('subject')
@@ -29,7 +30,6 @@ def foundation_index():
         return render_template("result.html", t = t)
 
 
-    
 @app.route("/foundation/<subjectid>", methods = ['GET', 'POST'])
 def foundation_sub(subjectid):
     if request.method == "GET":
@@ -39,6 +39,7 @@ def foundation_sub(subjectid):
             return render_template("foundation/type2.html", subname = subid[subjectid])
 
 
+#Diploma
 @app.route("/diploma",methods = ['GET','POST'])
 def index():
     if request.method == 'GET':
@@ -85,4 +86,4 @@ def index():
         sub=DiplomaSubject(request.form['subject'],request.form)
         t = round(sub.calculate(),2)
         g = grade(t)
-        return render_template("diplomaresult.html",t=t,g=g)
+        return render_template("diplomaresult.html",t=t,g=g,i=request.form['subject'],subject=diploma[request.form["subject"]])

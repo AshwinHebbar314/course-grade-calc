@@ -1,0 +1,35 @@
+html,body{
+    font-family: 'Lora', serif;
+    background-color: whitesmoke;
+}
+.navbar-brand{
+    font-size: x-large;
+}
+.page-header{
+    padding-top: 10rem;
+    text-align: center;
+}
+.main-content{
+    padding-top: 3rem;
+    text-align: center;
+}
+.button{
+    padding: 3rem;
+}
+.btn{
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    color: white;
+    font-size: xx-large;
+    width: 220px;
+    height: 110px;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover{
+    width:300px;
+    transition:width 0.10s linear 0s;
+    color: white;
+}
