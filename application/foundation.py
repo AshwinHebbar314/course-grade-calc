@@ -27,16 +27,16 @@ class FoundationSubs:
 
             return min(100,t)
         
-        elif self.id == '6':
-            gaa = float(self.d['gaa'])
-            q1 = float(self.d['q1'])
-            q2 = float(self.d['q2'])
-            f = float(self.d['f'])
-            exAct = float(self.d['exAct']) #capped to 10
+        # elif self.id == '6':
+        #     gaa = float(self.d['gaa'])
+        #     q1 = float(self.d['q1'])
+        #     q2 = float(self.d['q2'])
+        #     f = float(self.d['f'])
+        #     exAct = float(self.d['exAct']) #capped to 10
 
-            t = 0.1*gaa + max(0.6*f + 0.25*max(q1, q2), 0.4*f + 0.25*q1 + 0.25*q2) + exAct
+        #     t = 0.1*gaa + max(0.6*f + 0.25*max(q1, q2), 0.4*f + 0.25*q1 + 0.25*q2) + exAct
 
-            return min(100,t)
+        #     return min(100,t)
 
         elif self.id == '7':
             gaa = float(self.d['gaa'])
