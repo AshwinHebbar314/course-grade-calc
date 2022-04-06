@@ -81,6 +81,8 @@ def index():
         if request.args.get("subject") == '12':
             i = '12'
             return render_template("diploma/sub12.html",flag=1,x=i,y=diploma[i])
+        if request.args.get("subject") == 'Choose Subject':
+            return 'Choose a valid subject'
 
     if request.method == 'POST':
         sub=DiplomaSubject(request.form['subject'],request.form)
