@@ -33,17 +33,15 @@
 <div class="container">
         <br><br><br>
         <h1>Grade Calculator for {{subname}} </h1>
-        <form method="post">
+        <form method="POST">
             <p>GAA Marks</p>
-            <input type="text" placeholder  = "GAA" name = "gaa" required> 
+            <input type="text" placeholder  = "GAA" name = "gaa" required>
             <p>Quiz 1 Marks</p>
             <input type="text" placeholder  = "Quiz 1" name = "q1" required>
             <p>Quiz 2 Marks</p>
             <input type="text" placeholder  = "Quiz 2" name = "q2" required>
-            {% if subid == '6' %}
-            <p>Extra Marks</p>
-            <input type="text" placeholder  = "Extra Marks" name = "exAct" required>
-            {% endif %}
+            <p>Quiz 3 Marks</p>
+            <input type="text" placeholder  = "Quiz 3" name = "q3" required>
             <p>Expected Final Score</p>
             <input type="text" placeholder  = "(Expected) End Sem Score" name = "f" required>
             <br><br>

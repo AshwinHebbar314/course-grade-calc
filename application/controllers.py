@@ -10,24 +10,12 @@ def homepage():
     return render_template("homepage.html")
 
 #Foundation
-@app.route("/foundation", methods = ['GET', 'POST'])
+@app.route("/foundation", methods = ['GET'])
 def foundation_index():
     subject_id = request.args.get('subject')
     if request.method == "GET":
         if request.args == {}:
-            return render_template("foundation.html", flag = 0, d = subid)
-        if int(request.args.get('subject')) in [1,2,3,4,5,6,7,8]:
-            return foundation_sub(subject_id)
-    else:
-        sub = FoundationSubs(subject_id, request.form)
-        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print(request.args.get('subject'))
-        print(request.form)
-        t = sub.calculate()
-        print(t)
-        # g = grade(int(t))
-        # print(g)
-        return render_template("result.html", t = t)
+            return render_template("foundation.html")
 
 
 @app.route("/foundation/<subjectid>", methods = ['GET', 'POST'])
@@ -37,6 +25,14 @@ def foundation_sub(subjectid):
             return render_template("foundation/type1.html", subname = subid[subjectid], subid = subjectid)
         elif int(subjectid) == 7:
             return render_template("foundation/type2.html", subname = subid[subjectid])
+    if request.method == "POST":
+            data = request.form
+            sub = FoundationSubs(subjectid, data)
+            t = sub.calculate()
+            g = grade(t)
+            # print("__________________________")
+            # print(t,g)
+            return render_template("foundationresult.html", t = t, g = g, subject = subid[subjectid], subid = subjectid)
 
 
 #Diploma
