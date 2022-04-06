@@ -1,8 +1,13 @@
-/* .navbar-brand{
+html,body{
+    font-family: 'Lora', serif;
+    background-color: #b8c6db;
+    background-image: repeating-linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+.navbar-brand{
     font-size: x-large;
-} */
+}
 .page-header{
-    padding-top: 5rem;
+    padding-top: 10rem;
     text-align: center;
 }
 .main-content{
@@ -13,7 +18,11 @@
 .form-select{
     text-align: center;
     border-radius: 25px;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 2rem;
 }
 
-
+.form-control{
+    text-align: center;
+    border-radius: 25px;
+    border-color:darkgray;
+}

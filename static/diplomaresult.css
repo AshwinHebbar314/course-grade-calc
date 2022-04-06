@@ -1,0 +1,18 @@
+html,body{
+    font-family: 'Lora', serif;
+    background-color: #ffffff;
+    background-image: repeating-linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+.page-header{
+    text-align: center;
+    padding-top: 10rem;
+}
+.navbar-brand{
+    font-size: x-large;
+}
+.main-content{
+    padding: 3rem;
+}
+.buttons{
+    text-align: center;
+}

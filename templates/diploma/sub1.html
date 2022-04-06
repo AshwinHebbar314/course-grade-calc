@@ -1,13 +1,35 @@
 {% extends "diploma.html" %}
 {% block content %}
 <form action="/diploma" method="POST">
-    <select class="form-select" name="subject" id="subject">
-        <option value="{{x}}">{{y}}</option>
-    </select><br>
-    <input type="number" step="any" name="gaa" placeholder='gaa' required><br>
-    <input type="number" step="any" name="q1" placeholder='q1' required><br>
-    <input type="number" step="any" name="q2" placeholder='q2' required><br>
-    <input type="number" step="any" name="f" placeholder='f' required><br>
-    <input type="submit"><br>
+    <div class="mb-3">
+        <select class="form-select" name="subject" id="subject">
+            <option value="{{x}}">{{y}}</option>
+        </select>
+    </div>
+    <div class="mb-4">
+        <input class="form-control" type="number" step="any" name="gaa" placeholder='Graded Assignment Average' required>
+    </div>
+    <div class="mb-4">
+        <input class="form-control" type="number" step="any" name="q1" placeholder='Quiz 1' required>
+    </div>
+    <div class="mb-4">
+        <input class="form-control" type="number" step="any" name="q2" placeholder='Quiz 2' required>
+    </div>
+    <div class="mb-4">
+        <input class="form-control" type="number" step="any" name="f" placeholder='End Term' required>
+    </div>
+    <div class="container p-3">
+        <div class="row">
+            <div class="col p-2">
+                <a class="btn btn-outline-secondary" href="/diploma?subject={{x}}">Clear all</a>
+            </div>
+            <div class="col p-2">
+                <button class="btn btn-outline-primary" type="submit"> Calculate </button>
+            </div>
+            <div class="col p-2">
+                <a href="/diploma" class="btn btn-outline-dark">Go Home</a>
+            </div>
+        </div>
+    </div>
 </form>
 {% endblock %}
