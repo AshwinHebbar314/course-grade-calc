@@ -1,3 +1,4 @@
+from crypt import methods
 from main import app
 from flask import render_template,request
 from .diploma import *
@@ -28,7 +29,7 @@ def foundation_sub(subjectid):
     if request.method == "POST":
             data = request.form
             sub = FoundationSubs(subjectid, data)
-            t = sub.calculate()
+            t = round(sub.calculate(),2)
             g = grade(t)
             # print("__________________________")
             # print(t,g)
@@ -85,3 +86,9 @@ def index():
         t = round(sub.calculate(),2)
         g = grade(t)
         return render_template("diplomaresult.html",t=t,g=g,i=request.form['subject'],subject=diploma[request.form["subject"]])
+
+#Disclaimer
+@app.route("/disclaimer", methods=["GET"])
+def disclaimer():
+    if request.method == 'GET':
+        return render_template("disclaimer.html")

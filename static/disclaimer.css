@@ -8,11 +8,9 @@ html,body{
 }
 .page-header{
     padding-top: 10rem;
-    text-align: center;
 }
 .main-content{
     padding-top: 3rem;
-    text-align: center;
 }
 .button{
     padding: 3rem;
@@ -45,4 +43,7 @@ html,body{
 hr{
     margin-top: 0.6%;
     margin-bottom: 0.5%;
+}
+.go-back{
+    color: black;
 }
