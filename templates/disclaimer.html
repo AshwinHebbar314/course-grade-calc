@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href={{ url_for('static',filename='homepage.css') }}>
+    <link rel="stylesheet" href={{ url_for('static',filename='disclaimer.css') }}>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
     <!-- Title -->
-    <title>Score and Grade Calculator</title>
+    <title>Disclaimer : Score and Grade Calculator</title>
 </head>
 <body>
 
@@ -35,34 +35,48 @@
     <header class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1>Score and Grade Calculator</h1>
-                    <p>Calculate your total course score and grade without any hassle</p>
+                <div class="col-md-6">
+                    <h1>Disclaimer</h1>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main content -->
+    <!-- main content -->
     <section class="main-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h2>Choose your level</h2>
-                </div>
-            </div>
-        </div>
-        <div class="container button">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 mb-4">
-                    <a class="btn" href="/foundation" role="button">Foundation</a>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn" href="/diploma" role="button">Diploma</a>
+                <div class="col-md-6">
+                    <p>
+                        This app, while it's designed to help students predict their scores as accurately as possible. We cannot and will not claim 100% accuracy if the results. This is simply because of:
+                        <ul>
+                            <li>Human error by us.</li>
+                            <li>Mistakes in the input data from users.</li>
+                            <li>Last moment changes in grading criteria by IIT Madras.</li>
+                        </ul>
+                        So, this tool is designed to only give you a good estimate of your course score and grade based on your input(s).
+                        <br>
+                        If your find any discrepancy in the results, you can ping any of the creators of this page, the information is given below as well as the footer.
+                        <br><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>&nbsp;Aditya: <a href="mailto:21f1004560@student.onlinedegree.iitm.ac.in">21f1004560@student.onlinedegree.iitm.ac.in</a><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>&nbsp;Ashwin: <a href="mailto:21f1003155@student.onlinedegree.iitm.ac.in">21f1003155@student.onlinedegree.iitm.ac.in</a>
+                        <br><br>
+                        Thanks and best wishes.
+                        <br><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                        </svg><a href="/" class="go-back">&nbsp;Go back</a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- footer  -->
     <footer class="footer mt-auto py-3 bg-dark">
@@ -71,7 +85,7 @@
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
             </svg></a>&nbsp; and &nbsp;<a class="footer-link text-muted" target="_blank" rel="noreferrer noopener" href="http://linkedin.com/in/ashwin-hebbar">Ashwin Hebbar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-            </svg></a><hr><a class="footer-link text-muted" href="/disclaimer">Disclaimer</a></span>
+            </svg></a></span>
         </div>
     </footer>
 </body>
