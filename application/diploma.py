@@ -58,8 +58,8 @@ class DiplomaSubject:
             PE1 = float(self.d['op1'])
             PE2 = float(self.d['op2'])
             F = float(self.d['f'])
-            t =((0.1*GAA + 0.2*max(PE1,PE2)+ 0.10*min(PE1,PE2)+max(0.4*F+0.25*max(Qz1,Qz2),0.3*F+0.2*Qz1+0.2*Qz2))/110)*100
-            return t 
+            t = 0.1*GAA + 0.2*max(PE1,PE2)+ 0.10*min(PE1,PE2)+max(0.4*F+0.25*max(Qz1,Qz2),0.3*F+0.2*Qz1+0.2*Qz2)
+            return min(100,t) 
 
         if self.id == '7':
             GAA = float(self.d['gaa'])
