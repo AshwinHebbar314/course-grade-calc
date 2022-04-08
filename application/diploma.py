@@ -22,7 +22,7 @@ class DiplomaSubject:
             F = float(self.d['f'])
             bonus = float(self.d['bonus'])
             t = 0.2*max(Qz1,Qz2)+0.3*GAA+0.2*max(P,OP)+0.3*F+bonus
-            return t
+            return min(100,t)
 
         if self.id == '3':
             GAA = float(self.d['gaa'])
@@ -68,8 +68,8 @@ class DiplomaSubject:
             OPE1 = float(self.d['op1'])
             OPE2 = float(self.d['op2'])
             F = float(self.d['f'])
-            t = ((0.1*GAA + 0.15*max(Qz1,Qz2) + 0.5*F+0.2*max(OPE1,OPE2) + 0.10*min(OPE1,OPE2) +0.05*min(Qz1,Qz2))/110)*100
-            return t
+            t = 0.1*GAA + 0.15*max(Qz1,Qz2) + 0.5*F+0.2*max(OPE1,OPE2) + 0.10*min(OPE1,OPE2) +0.05*min(Qz1,Qz2)
+            return min(100,t)
 
         if self.id == '8':
             GAA = float(self.d['gaa'])
@@ -78,8 +78,8 @@ class DiplomaSubject:
             OPE1 = float(self.d['op1'])
             OPE2 = float(self.d['op2'])
             F = float(self.d['f'])
-            t = ((0.1*GAA + 0.15*max(Qz1,Qz2) + 0.5*F+0.2*max(OPE1,OPE2) + 0.10*min(OPE1,OPE2) +0.05*min(Qz1,Qz2))/110)*100
-            return t
+            t = 0.1*GAA + 0.15*max(Qz1,Qz2) + 0.5*F+0.2*max(OPE1,OPE2) + 0.10*min(OPE1,OPE2) +0.05*min(Qz1,Qz2)
+            return min(100,t)
 
         if self.id == '9':
             Qz1 = float(self.d['q1'])
