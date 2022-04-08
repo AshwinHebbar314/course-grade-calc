@@ -1,4 +1,3 @@
-from crypt import methods
 from main import app
 from flask import render_template,request
 from .diploma import *
@@ -31,8 +30,6 @@ def foundation_sub(subjectid):
             sub = FoundationSubs(subjectid, data)
             t = round(sub.calculate(),2)
             g = grade(t)
-            # print("__________________________")
-            # print(t,g)
             return render_template("foundationresult.html", t = t, g = g, subject = subid[subjectid], subid = subjectid)
 
 
@@ -92,3 +89,13 @@ def index():
 def disclaimer():
     if request.method == 'GET':
         return render_template("disclaimer.html")
+
+#cgpa calc
+@app.route("/cgpa-calculator", methods=["GET","POST"])
+def cgpa_calc():
+    if request.method == 'GET':
+        return render_template("cgpacalc.html")
+    if request.method == 'POST':
+        data = request.form["cgpa"].strip().split(" ")
+        data = cgpa(data)
+        return render_template("cgparesult.html",cgpa=data)
