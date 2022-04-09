@@ -90,12 +90,3 @@ def disclaimer():
     if request.method == 'GET':
         return render_template("disclaimer.html")
 
-#cgpa calc
-@app.route("/cgpa-calculator", methods=["GET","POST"])
-def cgpa_calc():
-    if request.method == 'GET':
-        return render_template("cgpacalc.html")
-    if request.method == 'POST':
-        data = request.form["cgpa"].strip().split(" ")
-        data = cgpa(data)
-        return render_template("cgparesult.html",cgpa=data)

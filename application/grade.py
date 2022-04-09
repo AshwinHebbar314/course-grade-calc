@@ -1,7 +1,5 @@
 """Grade Calculation Function"""
 #Common for both foundation and diploma
-from sqlalchemy import except_all
-
 
 def grade(n):
     if n>=90:
@@ -18,14 +16,3 @@ def grade(n):
         return ("E",4)
     else:
         return ("U",0)
-
-"""CGPA Calculation Function"""
-def cgpa(L):
-    gradepoint = {'S':10,'A':9,'B':8,'C':7,'D':6,'E':4,'U':0, 'I':0}
-    total = 0
-    for i in L:
-        try:
-            total += gradepoint[i]
-        except:
-            return "Invalid Input, Please Check Your Input. Only S,A,B,C,D,E,U,I are accepted."
-    return round(total/len(L),2)
