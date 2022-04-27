@@ -23,7 +23,7 @@ class FoundationSubs:
                 exAct = float(self.d['exAct'])
             except:
                 exAct = 0
-            t = 0.1*gaa + max(0.6*f + 0.25*max(q1, q2), 0.4*f + 0.25*q1 + 0.25*q2) + exAct
+            t = 0.1*gaa + max(0.6*f + 0.2*max(q1, q2), 0.4*f + 0.2*q1 + 0.3*q2) + exAct
 
             return min(100,t)
         
@@ -44,7 +44,7 @@ class FoundationSubs:
             q2 = float(self.d['q2']) #oppe
             q3 = float(self.d['q3']) #oppe
             f = float(self.d['f'])
-            t = 0.1*gaa + 0.2*max(q2,q3) + 0.1*min(q2,q3) + max(0.5*f + 0.2*q1, 0.6*f)
+            t = 0.1*gaa + 0.1*q1 + max(0.5*f + 0.2*max(q2, q3), 0.4*f + 0.3*max(q2,q3) + 0.1*min(q2, q3))
 
             return min(100,t)
 
