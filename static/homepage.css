@@ -46,3 +46,8 @@ hr{
     margin-top: 0.6%;
     margin-bottom: 0.5%;
 }
+.alert{
+    margin-top: 3.5rem;
+    text-align: center;
+    font-size: small;
+}
