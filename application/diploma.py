@@ -31,11 +31,8 @@ class DiplomaSubject:
             Qz1 = float(self.d['q1'])
             Qz2 = float(self.d['q2'])
             GAA = float(self.d['gaa'])
-            P = float(self.d['p'])
             F = float(self.d['f'])
-            a_bonus = float(self.d['a_bonus'])
-            p_bonus = float(self.d['p_bonus'])
-            t = 0.2*max(Qz1,Qz2)+0.3*GAA+0.2*P+0.3*F+a_bonus+p_bonus
+            t = 0.2*max(Qz1,Qz2)+0.45*GAA+0.35*F
             return min(100,t)
 
         if self.id == '3':
@@ -60,9 +57,8 @@ class DiplomaSubject:
             GA = float(self.d['gaa'])
             Qz1 = float(self.d['q1'])
             Qz2 = float(self.d['q2'])
-            PV = float(self.d['p'])
             F = float(self.d['f'])
-            t = 0.25*PV+0.1*GA+ max(0.3*F+0.15*Qz1+0.2*Qz2, 0.4*F+0.15*max(Qz1,Qz2))
+            t = 0.15*GA+max(0.4*F + 0.2*Qz1 + 0.25*Qz2, 0.45*F + 0.3*max(Qz1,Qz2))
             return t 
 
         if self.id == '6':
@@ -91,9 +87,8 @@ class DiplomaSubject:
             Qz2 = float(self.d['q2'])
             OPE1 = float(self.d['op1'])
             OPE2 = float(self.d['op2'])
-            V = float(self.d['v'])
             F = float(self.d['f'])
-            t = 0.1*GAA + 0.1*Qz1 + 0.1*Qz2 + 0.3*F+0.1*OPE1 + 0.1*OPE2 + 0.2*V
+            t = 0.1*GAA + 0.15*Qz1 + 0.15*Qz2 + 0.3*F + 0.15*OPE1 + 0.15*OPE2
             return min(100,t)
 
         if self.id == '9':
@@ -128,7 +123,6 @@ class DiplomaSubject:
             GA = float(self.d['gaa'])
             Qz1 = float(self.d['q1'])
             Qz2 = float(self.d['q2'])
-            PV = float(self.d['p'])
             F = float(self.d['f'])
-            t = 0.1*GA+ 0.25*PV+ max(0.3*F+0.15*Qz1+0.20*Qz2, 0.4*F+0.15*max(Qz1,Qz2))
+            t = 0.1*GA+ max(0.35*F + 0.25*Qz1 + 0.3*Qz2, 0.5*F + 0.3*max(Qz1, Qz2))
             return t  
